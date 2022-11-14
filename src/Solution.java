@@ -1,5 +1,6 @@
 public class Solution {
     public static int solution(String S){
+
         /* alociram 26 mjesta (broj slova alfabeta) u nizu integera (count) u koji ću spremati frekvenciju
          ponavljanja slova u poslanom stringu S */
 
