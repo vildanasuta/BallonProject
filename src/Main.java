@@ -18,6 +18,8 @@ public class Main {
                     throw new NotUppercaseException("Inputted word is not UPPERCASE.");
             }
             File obj=new File("src\\inText.txt");
+            if(obj==null)
+                throw new InTextFileNotFound(" inText.txt");
             Scanner reader=new Scanner(obj);
             FileWriter fileWriter=new FileWriter("src\\outText.txt");
 
