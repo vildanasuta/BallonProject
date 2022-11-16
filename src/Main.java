@@ -43,6 +43,8 @@ public class Main {
             logger.log(Level.WARNING,e.getMessage());
         } catch (WordTooLong e){
             logger.log(Level.WARNING,e.getMessage());
+        } catch (WordTooLong e){
+            logger.log(Level.WARNING,e.getMessage());
         }
     }
 
