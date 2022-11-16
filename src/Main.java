@@ -18,6 +18,8 @@ public class Main {
                     throw new NotUppercaseException("Inputted word is not UPPERCASE.");
             }
             File obj=new File("src\\inText.txt");
+            if(obj==null)
+                throw new InTextFileNotFound(" inText.txt");
             Scanner reader=new Scanner(obj);
             FileWriter fileWriter=new FileWriter("src\\outText.txt");
 
@@ -36,6 +38,8 @@ public class Main {
         } catch(NullPointerException e){ //NullPointerException-unchecked exception
             logger.log(Level.WARNING,e.getMessage());
         } catch (NotUppercaseException e) { //Custom made exceptions: NotUppercaseException and WordTooLong
+            logger.log(Level.WARNING,e.getMessage());
+        } catch (WordTooLong e){
             logger.log(Level.WARNING,e.getMessage());
         } catch (WordTooLong e){
             logger.log(Level.WARNING,e.getMessage());
