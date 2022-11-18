@@ -1,7 +1,6 @@
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 
 import java.io.File;
@@ -9,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.*;
 
 class MainTest {
     @Mock
@@ -24,7 +23,8 @@ class MainTest {
     @Test
     void mainTest() {
         rw = mock(ReadAndWrite.class);
-        File obj = rw.getInputFile();
+        File obj;
+        when(rw.getInputFile()).thenReturn(obj=new File("src/main/java/inText.txt"));
         assertNotNull(obj);
     }
 
