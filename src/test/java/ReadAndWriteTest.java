@@ -9,11 +9,12 @@ import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
-import static org.testng.AssertJUnit.assertEquals;
-import static org.testng.AssertJUnit.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 
 public class ReadAndWriteTest {
-    static Logger logger=Logger.getLogger(InTextFileNotFound.class.getName());
+    static Logger logger=Logger.getLogger(ReadAndWriteTest.class.getName());
     @BeforeClass
     public static void startInfo(){
         logger.log(Level.INFO, "Testing process has started.");

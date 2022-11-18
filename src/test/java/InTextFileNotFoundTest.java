@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class InTextFileNotFoundTest {
-    static Logger logger=Logger.getLogger(InTextFileNotFound.class.getName());
+    static Logger logger=Logger.getLogger(InTextFileNotFoundTest.class.getName());
     @BeforeClass
     public static void startInfo(){
         logger.log(Level.INFO, "Test has started.");

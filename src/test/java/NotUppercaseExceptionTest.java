@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class NotUppercaseExceptionTest {
-    static Logger logger=Logger.getLogger(InTextFileNotFound.class.getName());
+    static Logger logger=Logger.getLogger(NotUppercaseExceptionTest.class.getName());
     @BeforeClass
     public static void startInfo(){
         logger.log(Level.INFO, "Test has started.");

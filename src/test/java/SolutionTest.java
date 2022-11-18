@@ -8,10 +8,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
 
 public class SolutionTest {
-    static Logger logger=Logger.getLogger(InTextFileNotFound.class.getName());
+    static Logger logger=Logger.getLogger(SolutionTest.class.getName());
     @BeforeClass
     public static void startInfo(){
         logger.log(Level.INFO, "Testing process has started.");
