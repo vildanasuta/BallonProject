@@ -7,7 +7,9 @@ public class Main {
     static Logger logger = Logger.getLogger(Main.class.getName());
     public static void main(String[] args) {
         try{
-            String inputtedWord=InputFunction();
+            System.out.println("Type in the word you are looking for: ");
+            Scanner inputWord=new Scanner(System.in);
+            String inputtedWord=inputWord.nextLine();
             if(inputtedWord.length()>200000){
                 throw new WordTooLong("Inputted word is too long. ");
             }
@@ -15,12 +17,10 @@ public class Main {
                 if(Character.isLowerCase(inputtedWord.charAt(i)))
                     throw new NotUppercaseException("Inputted word is not UPPERCASE.");
             }
-            File obj=getInputFile();
+            File obj= ReadAndWrite.getInputFile();
             if(obj==null)
                 throw new InTextFileNotFound("inText.txt not found.");
-            Scanner reader=makeScanner(obj);
-            FileWriter fileWriter=makeFileWriter();
-            readAndWrite(reader,fileWriter,inputtedWord);
+            ReadAndWrite.readAndWrite(obj,inputtedWord);
 
         }
         catch (FileNotFoundException fnfe){ //FileNotFound-checked exception
@@ -36,36 +36,6 @@ public class Main {
         }
     }
 
-    public static FileWriter makeFileWriter() throws IOException {
-        FileWriter fileWriter=new FileWriter( "src/main/java/outText.txt");
-        return fileWriter;
-    }
 
-    public static Scanner makeScanner(File obj) throws FileNotFoundException {
-        Scanner reader=new Scanner(obj);
-        return reader;
-    }
-
-    public static void readAndWrite(Scanner reader, FileWriter fileWriter, String inputtedWord) throws IOException {
-        while(reader.hasNextLine()) {
-            String S = reader.nextLine();
-            fileWriter.write("From the word given, inputted word can be formed " +
-                    Solution.solution(inputtedWord,S)+"x. ");
-            fileWriter.write(System.getProperty( "line.separator" ));
-        }
-        fileWriter.close();
-    }
-
-    public static File getInputFile() {
-        File obj=new File("src/main/java/inText.txt");
-        return obj;
-    }
-
-    public static String InputFunction() {
-        System.out.println("Type in the word you are looking for: ");
-        Scanner inputWord=new Scanner(System.in);
-        String inputtedWord=inputWord.nextLine();
-        return inputtedWord;
-    }
 
 }
