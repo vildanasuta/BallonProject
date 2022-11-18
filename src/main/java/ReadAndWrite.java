@@ -8,6 +8,7 @@ public class ReadAndWrite {
         File obj=new File("src/main/java/inText.txt");
         return obj;
     }
+
     public static void readAndWrite(File obj, String inputtedWord) throws IOException {
         Scanner reader= new Scanner(obj);
         FileWriter fileWriter= new FileWriter( "src/main/java/outText.txt");

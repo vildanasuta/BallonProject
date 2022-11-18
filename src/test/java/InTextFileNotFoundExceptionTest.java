@@ -6,15 +6,15 @@ import org.junit.Test;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class InTextFileNotFoundTest {
-    static Logger logger=Logger.getLogger(InTextFileNotFoundTest.class.getName());
+public class InTextFileNotFoundExceptionTest {
+    static Logger logger=Logger.getLogger(InTextFileNotFoundExceptionTest.class.getName());
     @BeforeClass
     public static void startInfo(){
         logger.log(Level.INFO, "Test has started.");
     }
     @Test
     public void testConstructor() {
-        InTextFileNotFound inTextException = new InTextFileNotFound("inText.txt not found.");
+        InTextFileNotFoundException inTextException = new InTextFileNotFoundException("inText.txt not found.");
         assertEquals("inText.txt not found.", inTextException.getLocalizedMessage());
     }
     @AfterClass

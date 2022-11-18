@@ -7,15 +7,15 @@ import org.junit.Test;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class WordTooLongTest {
-    static Logger logger=Logger.getLogger(WordTooLongTest.class.getName());
+public class WordTooLongExceptionTest {
+    static Logger logger=Logger.getLogger(WordTooLongExceptionTest.class.getName());
     @BeforeClass
     public static void startInfo(){
         logger.log(Level.INFO, "Test has started.");
     }
     @Test
     public void testConstructor() {
-        WordTooLong actualWordTooLong = new WordTooLong("Inputted word is too long. ");
+        WordTooLongException actualWordTooLong = new WordTooLongException("Inputted word is too long. ");
         assertEquals("Inputted word is too long. ", actualWordTooLong.getLocalizedMessage());
     }
     @AfterClass

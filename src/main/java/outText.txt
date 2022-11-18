@@ -1,4 +1,0 @@
-From the word given, inputted word can be formed 1x. 
-From the word given, inputted word can be formed 2x. 
-From the word given, inputted word can be formed 0x. 
-From the word given, inputted word can be formed 1x. 

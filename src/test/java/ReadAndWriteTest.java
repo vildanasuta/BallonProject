@@ -9,8 +9,11 @@ import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 
 public class ReadAndWriteTest {
@@ -26,10 +29,11 @@ public class ReadAndWriteTest {
         File obj=ReadAndWrite.getInputFile();
         assertEquals("src\\main\\java\\inText.txt",obj.getPath());
     }
-
+    @SuppressWarnings("unchecked")
     @Test
     public void testReadAndWrite() throws IOException {
-        File obj=ReadAndWrite.getInputFile();
+        File obj= mock(File.class);
+        when(obj.exists()).thenReturn(true);
         ReadAndWrite.readAndWrite(obj, "BALLOON");
         File outText=new File("src/main/java/outText.txt");
         assertTrue(outText.exists());
