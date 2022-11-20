@@ -1,0 +1,6 @@
+SolutionTest.class
+NotUppercaseExceptionTest.class
+WordTooLongExceptionTest.class
+CheckInputTest.class
+InTextFileNotFoundExceptionTest.class
+ReadAndWriteTest.class
