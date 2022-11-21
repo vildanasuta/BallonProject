@@ -54,5 +54,12 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.platform:junit-platform-commons:1.8.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
+    <orderEntry type="library" name="Maven: cloud.piranha.webapp:piranha-webapp-webservlet:20.5.0" level="project" />
+    <orderEntry type="library" name="Maven: cloud.piranha.servlet:piranha-servlet-webservlet:20.4.0" level="project" />
+    <orderEntry type="library" name="Maven: cloud.piranha:piranha:20.4.0" level="project" />
+    <orderEntry type="library" name="Maven: cloud.piranha:piranha-api:20.4.0" level="project" />
+    <orderEntry type="library" name="Maven: cloud.piranha.resource:piranha-resource-api:20.4.0" level="project" />
+    <orderEntry type="library" name="Maven: cloud.piranha.servlet:piranha-servlet-api:20.4.0" level="project" />
+    <orderEntry type="library" name="Maven: cloud.piranha.resource:piranha-resource:20.4.0" level="project" />
   </component>
 </module>
